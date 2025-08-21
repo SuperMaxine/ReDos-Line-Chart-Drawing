@@ -14,6 +14,19 @@
     button { padding: 8px 14px; }
     canvas { margin-top: 18px; border: 1px solid #ccc; }
     small.hint { color: #666; display: block; margin-top: 4px; }
+    #loading {
+      display: none;
+      width: 24px;
+      height: 24px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -39,6 +52,7 @@
 
     <button id="run">运行测试并画图</button>
     <button id="export">导出为 PNG</button>
+    <div id="loading"></div>
   </div>
 
   <canvas id="chart" width="900" height="520"></canvas>
